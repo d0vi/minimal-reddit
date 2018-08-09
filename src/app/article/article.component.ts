@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
 
 import { Article } from './article';
 
@@ -10,12 +10,9 @@ import { Article } from './article';
 export class ArticleComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'row';
-  article: Article;
+  @Input() article: Article;
 
-  constructor() {
-    this.article = new Article('Angular 6', 'https://angular.io', 10);
-  }
-
+  constructor() { }
 
   voteUp(): boolean {
     this.article.voteUp();
