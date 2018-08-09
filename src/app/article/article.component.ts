@@ -16,17 +16,18 @@ export class ArticleComponent implements OnInit {
     this.article = new Article('Angular 6', 'https://angular.io', 10);
   }
 
-  ngOnInit() {
-  }
 
   voteUp(): boolean {
-    this.article.votes += 1;
+    this.article.voteUp();
     return false;
   }
 
   voteDown(): boolean {
-    this.article.votes -= 1;
+    this.article.voteDown();
     return false;
+  }
+
+  ngOnInit() {
   }
 
 }
