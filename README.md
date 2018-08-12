@@ -1,4 +1,4 @@
-# Minimal reddit
+# minimalistic reddit
 
 Primitive version of a *reddit-like* web application.
 
